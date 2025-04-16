@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCareHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="home-screen">
+        <div class="nav-srch">
+            <div class="nav-srch-logo">
+                <img src="LogoPet.png" alt="Logo">
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+            <div class="nav-srch-links">
+                
+                <a id="Home" href="PetCareHub.html">Home</a>
+                <a id="About" href="#about">About</a>
+                <a id="Personlized Care" href="#personalized">Personlized PetCare</a>
+            </div>
+        </div>
+        <section class="first">
+            <div class="f1">
+                <h1>A Personlized PetCare </h1><h1>only for your</h1>
+                <h1 class="name">Pet.</h1> 
+                <a href="#about">
+                    <button class="Aboutme">Learn More</button>
+                </a>
+            </div>
+            <div class="p1">
+                <img src="dogimg2.jpg" alt="Product" height="600px">
+            </div>
+        </section>
+    </div>
+    
+    <section class="about" id="about"> 
+        <h2>About Us</h2><br><br>
+        <p>
+            Welcome to DogCareHub! We are passionate about providing personalized care for your furry friends. Our mission is to ensure that every dog receives the attention, love, and care they deserve. We understand that every dog is unique, which is why we create customized care plans tailored for your dog. Whether it’s dietary preferences, exercise routines, or grooming tips, we’ve got you covered!
+        </p>
+        <br>
+        <p>
+            Our comprehensive breed information section offers insights into the characteristics, behaviors, and needs of various dog breeds. From the playful Golden Retriever to the protective German Shepherd, we provide the knowledge you need to make informed decisions about your dog's care. Explore our resources to learn about training techniques, health tips, and socialization strategies specific to your dog's breed. We believe that understanding your dog's breed can lead to a happier, healthier life for both you and your pet!
+        </p>
+    </section>
+    <main id="personalized">
+        <div class="cont">
+            <div class="prsnl">
+                <h2>Personalized Pet Care</h2>
+            </div>
+            <section class="form-section">
+                <form id="dogCareForm">
+                    <label for="weight">Dog's Weight (kg):</label><br>
+                    <input type="number" id="weight" name="weight" required><br><br>
+                    
+                    <label for="age">Dog's Age (years):</label><br>
+                    <input type="number" id="age" name="age" required><br><br>
+                    
+                    <label for="breed">Dog's Breed:</label><br>
+                    <select id="breed" name="breed" required>
+                        <option value="Labrador">Labrador Retriever</option>
+                        <option value="Golden Retriever">Golden Retriever</option>
+                        <option value="German Shepherd">German Shepherd</option>
+                        <option value="Poodle">Poodle</option>
+                        <option value="Bulldog">Bulldog</option>
+                        <option value="Beagle">Beagle</option>
+                        <option value="Rottweiler">Rottweiler</option>
+                        <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+                        <option value="Boxer">Boxer</option>
+                        <option value="Dachshund">Dachshund</option>
+                        <option value="Shih Tzu">Shih Tzu</option>
+                        <option value="Bichon Frise">Bichon Frise</option>
+                        <option value="Great Dane">Great Dane</option>
+                        <option value="Siberian Husky">Siberian Husky</option>
+                        <option value="Doberman Pinscher">Doberman Pinscher</option>
+                        <option value="Australian Shepherd">Australian Shepherd</option>
+                        <option value="Chihuahua">Chihuahua</option>
+                        <option value="Pug">Pug</option>
+                        <option value="Mastiff">Mastiff</option>
+                        <option value="Cocker Spaniel">Cocker Spaniel</option>
+                    </select><br><br>
+
+                    <label for="activity_level">Activity Level:</label><br>
+                    <select id="activity_level" name="activity_level" required>
+                        <option value="low">Low</option>
+                        <option value="moderate">Moderate</option>
+                        <option value="high">High</option>
+                    </select><br><br>
+                    
+                    <label for="health_condition">Health Condition:</label><br>
+                    <select id="health_condition">
+                        <option value="none">None</option>
+                        <option value="allergy">Allergies</option>
+                        <option value="obesity">Obesity/Overweight</option>
+                        <option value="underweight">Underweight</option>
+                        <option value="joint_issues">Joint Issues/Arthritis</option>
+                        <option value="heart_condition">Heart Condition</option>
+                        <option value="kidney_issues">Kidney/Renal Issues</option>
+                        <option value="dental_issues">Dental Issues</option>
+                        <option value="diabetes">Diabetes</option>
+                    </select>
+                    <button type="button" onclick="generateCarePlan()">Generate Care Plan</button>
+                </form>
+                <div class="output">
+                    <h2>Your Dog's Personalized Care Plan:</h2>
+                    <div id="carePlan"></div>
+                </div><br>
+            </section>
+        </div>
+    </main>
+
+    <div class="videocont">
+        <h2>Videos That Might Help</h2>
+        <div class="video-container">
+            <div class="video">
+            
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/ktxuIEFvBxE?si=-xIsb60hbWA_ZuL6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/mbcpEcGv_WQ?si=d4ybjv0dgglEraTg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/swInctw_ZHo?si=fguGb3xraSpiAfxS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="Footer-logo">
+            <img src="Screenshot_2025-04-03_152819-removebg-preview.png" alt="logo">
+        </div>
+        <div class="Footer-links">
+            <a id="Home" href="PetCareHub.html">Home</a>
+            <a id="About" href="#about">About</a>
+            <a id="Personlized Care" href="#personalized">Personlized PetCare</a>
+        </div>
+        <div class="Footer-contact">
+            <p>Contact Us:</p>
+            <div class="f-links">
+                <a href="https://www.instagram.com/_yashverma13/" target="_blank">
+                    <i class="fa-brands fa-instagram" style="color: #ffffff;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/yash-verma-b392b0284/" target="_blank">
+                    <i class="fa-brands fa-linkedin" style="color: #ffffff;"></i>
+                </a>                
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
